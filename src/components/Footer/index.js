@@ -6,6 +6,7 @@ import {
   FaTwitter,
   FaLinkedin,
 } from "react-icons/fa";
+import { animateScroll as scroll } from "react-scroll";
 import {
   FooterContainer,
   FooterWrap,
@@ -23,6 +24,10 @@ import {
 } from "./FooterElements";
 
 const Footer = () => {
+  const toggleHome = () => {
+    scroll.scrollToTop();
+  };
+
   return (
     <FooterContainer>
       <FooterWrap>
@@ -62,7 +67,9 @@ const Footer = () => {
         </FooterLinksContainer>
         <SocialMedia>
           <SocialMediaWrap>
-            <SocialLogo to="/">brand.</SocialLogo>
+            <SocialLogo to="/" onClick={toggleHome}>
+              brand.
+            </SocialLogo>
             <WebsiteRights>Made by Aaron Durant in 2022.</WebsiteRights>
             <SocialIcons>
               <SocialIconLink href="/" target="_blank" aria-label="Facebook">
