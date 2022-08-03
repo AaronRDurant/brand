@@ -1,7 +1,14 @@
 import React from "react";
+import ScrollToTop from "../components/ScrollToTop";
+import Signin from "../components/Signin";
 
 const SigninPage = () => {
-  return <h1>Sign in Page</h1>;
+  return (
+    <>
+      <ScrollToTop />
+      <Signin />
+    </>
+  );
 };
 
 export default SigninPage;
